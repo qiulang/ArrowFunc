@@ -7,10 +7,12 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, './dist'),
         filename: '[name].js',
-        libraryTarget: 'umd', //so nodejs can't it and browser can
+        libraryTarget: 'umd', 
         libraryExport: 'default',
         umdNamedDefine: true,
-        library: '[name]'
+        library: '[name]',
+        //so both nodejs and browser can run it but nodejs still fails to oputput debug log, not sure why
+        globalObject: 'this', 
     },
     module: {
         rules: [

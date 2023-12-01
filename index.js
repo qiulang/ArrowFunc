@@ -2,8 +2,6 @@
 import debug from 'debug'
 let log = debug('app:log')
 
-localStorage.setItem('debug', 'app:*,')
-
 const array1 = [1, 2, 3, 4];
 
 const initialValue = 0;
