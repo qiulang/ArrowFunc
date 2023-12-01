@@ -1,0 +1,26 @@
+{
+  "name": "arrowf",
+  "version": "1.0.0",
+  "description": "demonstrate babel fails to transpile arrow function for IE",
+  "main": "index.js",
+  "scripts": {
+    "build": "BABEL_ENV='production' webpack --mode production"
+  },
+  "keywords": [
+    "babel",
+    "arrow function",
+    "IE"
+  ],
+  "author": "qiulang",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.23.5",
+    "@babel/preset-env": "^7.23.5",
+    "babel-loader": "^8.3.0",
+    "core-js": "^3.33.3",
+    "debug": "^4.3.4",
+    "spark-md5": "^3.0.2",
+    "webpack": "^4.47.0",
+    "webpack-cli": "^3.3.12"
+  }
+}

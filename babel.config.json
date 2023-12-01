@@ -1,0 +1,22 @@
+{
+    "env": {
+        "production": {
+            "presets": [
+                [
+                    "@babel/preset-env",
+                    {
+                        "targets": {
+                            "chrome": "84",
+                            "ie": "10"
+                        },
+                        "modules": "commonjs",
+                        "debug": true,
+                        "useBuiltIns": "usage",
+                        "shippedProposals": true,
+                        "corejs": "3.33"
+                    }
+                ]
+            ]
+        }
+    }
+}
