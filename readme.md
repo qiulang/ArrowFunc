@@ -25,3 +25,11 @@ With the help from [Failed to transpile arrow functions even I saw "transform-ar
    1.  Without it, can transpile the code but browsers fail to run
    2. with it, IE fails to run
    3. So to make IE and all other evergreen browsers to run, use `exclude: /node_modules\/(?!(debug)\/).*/,`
+
+
+
+想不到最后居然还是因为debugjs ， 从 2019开始我就被它搞，都4年了 😂
+
+1. [@babel/preset-env fails to polyfill IE11 for debug module, version 4](https://github.com/babel/babel/issues/10707)  [qiulang](https://github.com/qiulang) opened this issue on Nov 14, 2019
+2. [Failing to load the file in IE ](https://github.com/socketio/socket.io-client/issues/1328) **[qiulang](https://github.com/qiulang)** commented [on Jun 22, 2021](https://github.com/socketio/socket.io-client/issues/1328#issuecomment-865863817) give up then !
+3. 现在 。。。 
