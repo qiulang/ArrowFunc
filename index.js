@@ -1,5 +1,8 @@
+//const debug = require('debug')
 import debug from 'debug'
 let log = debug('app:log')
+
+localStorage.setItem('debug', 'app:*,')
 
 const array1 = [1, 2, 3, 4];
 
@@ -9,4 +12,8 @@ const sumWithInitial = array1.reduce(
   initialValue,
 );
 
+let a = { name:"qiu", age: 18 }
+let b = { ...a, gender: "f" }
+
 log(sumWithInitial);
+log(JSON.stringify(b));

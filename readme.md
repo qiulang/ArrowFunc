@@ -15,3 +15,13 @@ With the help from [Failed to transpile arrow functions even I saw "transform-ar
 
 1. use  `.bablerc` instead of `babel.config.json`, run `npm run bundle`
 2. run `ag --js -c "=>{" ./dist/` or  `grep -c "=>{" ./dist/main.js`  to check
+
+
+
+### conclusion
+
+1. use ``babel.config.json`` for babel 7, refer to https://babeljs.io/docs/config-files#6x-vs-7x-babelrc-loading
+2. `exclude` setting in webpack.config.js:
+   1.  Without it, can transpile the code but browsers fail to run
+   2. with it, IE fails to run
+   3. So to make IE and all other evergreen browsers to run, use `exclude: /node_modules\/(?!(debug)\/).*/,`

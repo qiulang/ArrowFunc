@@ -7,7 +7,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, './dist'),
         filename: '[name].js',
-        libraryTarget: 'umd2',
+        libraryTarget: 'umd', //so nodejs can't it and browser can
         libraryExport: 'default',
         umdNamedDefine: true,
         library: '[name]'
@@ -16,6 +16,8 @@ module.exports = {
         rules: [
             {
                 test: /\.js$/,
+                // exclude: /node_modules/,
+                exclude: /node_modules\/(?!(debug)\/).*/,
                 use: ['babel-loader']
             }
         ]
